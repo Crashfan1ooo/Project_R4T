@@ -6,6 +6,7 @@ public class gunShoot : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public AudioSource bulletSound;
 
     public float bulletSpeed = 20f;
 
@@ -17,6 +18,8 @@ public class gunShoot : MonoBehaviour
         {
             shootGun();
             Debug.Log("Fire");
+            bulletSound.Play();
+
         }
     }
 
