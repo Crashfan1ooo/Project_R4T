@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    //Stuff pertaining to shooting
     public Rigidbody2D rb;
     public Camera cam;
 
     Vector2 mousePos;
+
+    
 
     void Update()
     {
