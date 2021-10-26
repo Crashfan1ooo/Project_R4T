@@ -6,6 +6,7 @@ public class gunShoot : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject bulletSlowPrefab;
     public AudioSource bulletSound;
 
     public float bulletSpeed = 20f;
@@ -21,6 +22,13 @@ public class gunShoot : MonoBehaviour
             bulletSound.Play();
 
         }
+
+        if(Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            shootSlow();
+            Debug.Log("Slow Bullet Fired");
+
+        }
     }
 
     void shootGun()
@@ -30,4 +38,13 @@ public class gunShoot : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletSpeed, ForceMode2D.Impulse);
     }
+
+    void shootSlow()
+    {
+        GameObject bulletslow = Instantiate(bulletSlowPrefab, firePoint.position, firePoint.rotation);
+        bulletslow.GetComponent<Rigidbody2D>();
+        Rigidbody2D rb = bulletslow.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.up * bulletSpeed, ForceMode2D.Impulse);
+    }
 }
+

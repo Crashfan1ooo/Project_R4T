@@ -16,9 +16,15 @@ public class bullets : MonoBehaviour
 
         Destroy(gameObject);
 
-        if(collision.gameObject.CompareTag("Test Target"))
+        if(collision.gameObject.CompareTag("Test Target") && gameObject.CompareTag("normalBullet"))
         {
             Destroy(collision.gameObject);
+        }
+
+
+        if (collision.gameObject.CompareTag("Test Target") && gameObject.CompareTag("slowBullet"))
+        {
+            collision.gameObject.GetComponent<targetMove>().speed = collision.gameObject.GetComponent<targetMove>().speed / 2;
         }
     }
 }
