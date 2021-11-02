@@ -24,7 +24,11 @@ public class bullets : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Test Target") && gameObject.CompareTag("slowBullet"))
         {
+            float speed1 = collision.gameObject.GetComponent<targetMove>().speed = collision.gameObject.GetComponent<targetMove>().speed;
+
             collision.gameObject.GetComponent<targetMove>().speed = collision.gameObject.GetComponent<targetMove>().speed / 2;
+
+            //WaitForSeconds(5f);
         }
     }
 }
