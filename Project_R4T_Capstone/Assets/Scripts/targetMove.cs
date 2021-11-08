@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class targetMove : MonoBehaviour
 {
-
+    public float ogSpeed;
     public float speed;
     public Vector3[] positions;
 
@@ -18,7 +18,9 @@ public class targetMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * speed);
+        //float ogSpeed = speed;
+        
+            transform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * speed);
 
         if( transform.position == positions[index])
         {
@@ -30,6 +32,15 @@ public class targetMove : MonoBehaviour
             {
                 index++;
             }
+        }
+
+        if(Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            speed  = speed / 2;
+        }
+        if(Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            speed = ogSpeed;
         }
     }
 }
