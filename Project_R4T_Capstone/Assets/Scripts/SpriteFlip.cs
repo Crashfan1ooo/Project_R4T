@@ -10,9 +10,6 @@ public class SpriteFlip : MonoBehaviour
     //checks what direction the player is facing before flipping
     bool facingRight;
 
-    //sets player speed
-    public float speed = 12f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +20,7 @@ public class SpriteFlip : MonoBehaviour
     void FixedUpdate()
     {
         //Enables Player Movement
-        float move = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        float move = Input.GetAxis("Horizontal");
 
 
         if (move < 0 && facingRight)
