@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canDoubleJump = false;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,4 +59,5 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(direction * characterSpeed * Time.deltaTime);
     }
+
 }
