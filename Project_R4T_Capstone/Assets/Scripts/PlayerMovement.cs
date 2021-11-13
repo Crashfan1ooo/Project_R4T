@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private CharacterController controller;
+    public Animator animator; 
 
     [SerializeField] public float characterSpeed = 12f;
 
@@ -30,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
 
         Vector3 direction = new Vector3(horizontalInput, 0, 0);
 
