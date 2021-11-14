@@ -8,15 +8,11 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator; 
 
     [SerializeField] public float characterSpeed = 12f;
-
     [SerializeField] public float characterJump = 3f;
-
     [SerializeField] private float gravity = 8f;
-
     [SerializeField] private float doubleJumpMultiplier = 0.5f;
 
     private float directionY;
-
     private bool canDoubleJump = false;
 
 
@@ -57,9 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         directionY -= gravity * Time.deltaTime;
-
         direction.y = directionY;
-
         controller.Move(direction * characterSpeed * Time.deltaTime);
     }
 
