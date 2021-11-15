@@ -65,6 +65,12 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
+        if(Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            characterSpeed = originalSpeed;
+        
+        }
+
         directionY -= gravity * Time.deltaTime;
         direction.y = directionY;
         controller.Move(direction * characterSpeed * Time.deltaTime);
