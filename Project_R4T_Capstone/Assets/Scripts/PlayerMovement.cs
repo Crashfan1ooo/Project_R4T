@@ -51,10 +51,17 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+
+            StaminaBar.instance.UseStamina(1);
+        }
 
         directionY -= gravity * Time.deltaTime;
         direction.y = directionY;
         controller.Move(direction * characterSpeed * Time.deltaTime);
+
+       
     }
 
 }
