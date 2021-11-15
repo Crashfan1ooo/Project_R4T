@@ -57,15 +57,14 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-                    
-                StaminaBar.instance.UseStamina(15);
-                characterSpeed = characterSpeed * 2;
-            
-        }
 
-        if(Input.GetKeyUp(KeyCode.LeftShift))
+            StaminaBar.instance.UseStamina(15);
+            characterSpeed = characterSpeed * 2;
+
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             characterSpeed = originalSpeed;
         
