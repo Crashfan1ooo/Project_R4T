@@ -11,15 +11,21 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public float characterJump = 3f;
     [SerializeField] private float gravity = 8f;
     [SerializeField] private float doubleJumpMultiplier = 0.5f;
+    private float originalSpeed;
 
     private float directionY;
     private bool canDoubleJump = false;
+    public bool isSprinting = false;
 
+    public GameObject staminaBar;
+    private StaminaBar staminaBarMeter;
 
     // Start is called before the first frame update
     void Start()
     {
+        originalSpeed = characterSpeed;
         controller = GetComponent<CharacterController>();
+        staminaBarMeter = staminaBar.GetComponent<StaminaBar>();
     }
 
     // Update is called once per frame
@@ -44,17 +50,19 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Space) && canDoubleJump)
+            if(Input.GetKeyDown(KeyCode.Space) && canDoubleJump)
             {
                 directionY = characterJump * doubleJumpMultiplier;
                 canDoubleJump = false;
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if(Input.GetKeyDown(KeyCode.LeftShift))
         {
-
-            StaminaBar.instance.UseStamina(1);
+                    
+                StaminaBar.instance.UseStamina(15);
+                characterSpeed = characterSpeed * 2;
+            
         }
 
         directionY -= gravity * Time.deltaTime;

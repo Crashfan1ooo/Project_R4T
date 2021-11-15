@@ -8,12 +8,15 @@ public class StaminaBar : MonoBehaviour
     public Slider staminaBar;
 
     private int maxStamina = 100;
-    private int currentStamina;
+    public int currentStamina;
 
     private WaitForSeconds regenTick = new WaitForSeconds(0.1f);
     private Coroutine regen;
 
     public static StaminaBar instance;
+
+    public GameObject thePlayer;
+    private PlayerMovement thePlayerMovement;
 
     // Start is called before the first frame update
 
@@ -23,6 +26,9 @@ public class StaminaBar : MonoBehaviour
     }
     void Start()
     {
+
+        thePlayerMovement = thePlayer.GetComponent<PlayerMovement>();
+
         currentStamina = maxStamina;
         staminaBar.maxValue = maxStamina;
         staminaBar.value = maxStamina;
@@ -32,8 +38,11 @@ public class StaminaBar : MonoBehaviour
     {
         if(currentStamina - amount >= 0)
         {
+            
             currentStamina -= amount;
             staminaBar.value = currentStamina;
+
+           
 
             if(regen != null)
             {
@@ -42,9 +51,10 @@ public class StaminaBar : MonoBehaviour
 
             regen = StartCoroutine(RegenStamina());
         }
-        else
+        else if (currentStamina == 0)
         {
             Debug.Log("Not enough stamina!");
+          
         }
     }
 
