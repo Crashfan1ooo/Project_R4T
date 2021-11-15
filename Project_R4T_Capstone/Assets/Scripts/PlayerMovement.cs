@@ -57,17 +57,21 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && staminaBarMeter.currentStamina > 15)
         {
 
             StaminaBar.instance.UseStamina(15);
             characterSpeed = characterSpeed * 2;
 
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        else if (Input.GetKeyUp(KeyCode.LeftShift) || staminaBarMeter.currentStamina <=15)
         {
             characterSpeed = originalSpeed;
         
+        }
+        if(staminaBarMeter.currentStamina <=15)
+        {
+            Debug.Log("Not enough stamina");
         }
 
         directionY -= gravity * Time.deltaTime;
