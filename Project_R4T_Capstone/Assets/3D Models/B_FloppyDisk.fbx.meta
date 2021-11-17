@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: 24fdf94cba5352c4cb4661ffc090985d
+guid: 66eff6d0c33971a48ade2826b47f58eb
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CrateBaseM
-    second: {fileID: 2100000, guid: 002bbdf34cfe3fa41bf697b876a1b3fe, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: TiledCardboardTex
-    second: {fileID: 2800000, guid: f9cafeecad4a75d43bc470650240ab03, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
