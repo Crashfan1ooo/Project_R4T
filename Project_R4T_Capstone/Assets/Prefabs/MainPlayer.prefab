@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4133531029041919007}
   m_Layer: 0
   m_Name: MainPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,8 +54,10 @@ MonoBehaviour:
   gravity: 8
   doubleJumpMultiplier: 0.5
   isSprinting: 0
+  health: 3
   staminaBar: {fileID: 0}
   healthText: {fileID: 0}
+  isDead: 0
 --- !u!143 &4133531029041919001
 CharacterController:
   m_ObjectHideFlags: 0
@@ -85,7 +87,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0, y: 1, z: 1}
+  m_Size: {x: 2, y: 1.5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4133531029674940170
 GameObject:
@@ -352,7 +354,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ed6d5642647f25d4abf7c550c77ff351, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.457
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -525,14 +527,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6916458644136269368}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
   m_LocalPosition: {x: 7.13, y: 1.3, z: 0}
   m_LocalScale: {x: 0.5423077, y: 0.5423077, z: 0.5423077}
   m_Children:
   - {fileID: 6916458643374792322}
   m_Father: {fileID: 6916458643909846956}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!33 &6916458644136269371
 MeshFilter:
   m_ObjectHideFlags: 0

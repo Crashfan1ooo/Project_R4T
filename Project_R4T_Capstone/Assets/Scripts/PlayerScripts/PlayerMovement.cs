@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
         {
             
             isDead = true;
-            Destroy(gameObject);
+            //Destroy(gameObject);
             gameObject.SetActive(false);
         }
 
