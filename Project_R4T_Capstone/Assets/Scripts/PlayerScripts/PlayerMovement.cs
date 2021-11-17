@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
     private CharacterController controller;
-    public Animator animator; 
+    public Animator animator;
+   
 
     [SerializeField] public float characterSpeed = 12f;
     [SerializeField] public float characterJump = 3f;
@@ -16,9 +18,12 @@ public class PlayerMovement : MonoBehaviour
     private float directionY;
     private bool canDoubleJump = false;
     public bool isSprinting = false;
+    public int health = 3;
 
     public GameObject staminaBar;
     private StaminaBar staminaBarMeter;
+    public TextMeshProUGUI healthText;
+    public bool isDead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
         originalSpeed = characterSpeed;
         controller = GetComponent<CharacterController>();
         staminaBarMeter = staminaBar.GetComponent<StaminaBar>();
+
+        setHealthText();
     }
 
     // Update is called once per frame
@@ -78,7 +85,34 @@ public class PlayerMovement : MonoBehaviour
         direction.y = directionY;
         controller.Move(direction * characterSpeed * Time.deltaTime);
 
-       
+        Death();
+    }
+    void setHealthText()
+    {
+        healthText.text = "Count: " + health.ToString();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.CompareTag("EnemyBullet") || collision.collider.CompareTag("Enemy"))
+        {
+            health = health - 1;
+
+            setHealthText();
+            
+        }
+    }
+
+    void Death()
+    {
+        if (health <= -2)
+        {
+            
+            isDead = true;
+            Destroy(gameObject);
+            gameObject.SetActive(false);
+        }
+
+
+    }
 }

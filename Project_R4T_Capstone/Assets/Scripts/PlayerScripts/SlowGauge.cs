@@ -37,7 +37,7 @@ public class SlowGauge : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.Mouse1))
             {
-                UseSlow(0.40f);
+                UseSlow(0.001f);
             }
             else if (currentSlow <= 1)
             {

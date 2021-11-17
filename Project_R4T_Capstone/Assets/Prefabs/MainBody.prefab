@@ -112,6 +112,7 @@ MonoBehaviour:
   slowAmount: {fileID: 0}
   firePoint: {fileID: 1363024808744633277}
   enemyBullet: {fileID: 3173754698944624811, guid: 164d00498d8aa914d823d270da118d64, type: 3}
+  canShoot: 0
 --- !u!1 &1363024809107761688
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +225,7 @@ MonoBehaviour:
   slowAmount: {fileID: 0}
   firePoint: {fileID: 1363024809107761695}
   enemyBullet: {fileID: 3173754698944624811, guid: 164d00498d8aa914d823d270da118d64, type: 3}
+  canShoot: 0
 --- !u!1 &1363024809317083915
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +241,7 @@ GameObject:
   - component: {fileID: 1363024809317083914}
   m_Layer: 0
   m_Name: MainBody
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -452,6 +454,7 @@ MonoBehaviour:
   slowAmount: {fileID: 0}
   firePoint: {fileID: 1363024809344184750}
   enemyBullet: {fileID: 3173754698944624811, guid: 164d00498d8aa914d823d270da118d64, type: 3}
+  canShoot: 0
 --- !u!1 &1363024810717370762
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,3 +567,4 @@ MonoBehaviour:
   slowAmount: {fileID: 0}
   firePoint: {fileID: 1363024810717370761}
   enemyBullet: {fileID: 3173754698944624811, guid: 164d00498d8aa914d823d270da118d64, type: 3}
+  canShoot: 0

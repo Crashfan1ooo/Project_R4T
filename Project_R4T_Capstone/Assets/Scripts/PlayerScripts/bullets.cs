@@ -16,7 +16,7 @@ public class bullets : MonoBehaviour
 
         Destroy(gameObject);
 
-        if(collision.gameObject.CompareTag("Test Target") && gameObject.CompareTag("normalBullet"))
+        if(collision.gameObject.CompareTag("Enemy") || gameObject.CompareTag("EnemyBullet"))
         {
             Destroy(collision.gameObject);
         }

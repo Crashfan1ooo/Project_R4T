@@ -48,7 +48,7 @@ public class targetMove : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Mouse1) && slowAmount.currentSlow > 1)
         {
-           speed  = speed / slowSpeedDown;
+            speed = speed / 4; //slowSpeedDown;
          
             
         }

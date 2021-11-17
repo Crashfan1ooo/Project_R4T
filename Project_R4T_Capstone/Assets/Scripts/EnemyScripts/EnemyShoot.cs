@@ -13,12 +13,14 @@ public class EnemyShoot : MonoBehaviour
 
     float fireRate; // rate of fire
     float nextFire;
+    private float ogFireRate;
 
     public bool canShoot;
     // Start is called before the first frame update
     void Start()
     {
         fireRate = 0.5f;
+        ogFireRate = fireRate;
         nextFire = Time.time;
     }
 
@@ -28,6 +30,18 @@ public class EnemyShoot : MonoBehaviour
         if (canShoot == true)
         {
             checkSpeedFire();
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Mouse1) && slowAmount.currentSlow > 1)
+        {
+            fireRate = fireRate * 4; //slowSpeedDown;
+            Debug.Log(fireRate);
+
+        }
+        if (Input.GetKeyUp(KeyCode.Mouse1) || slowAmount.currentSlow <= 1)
+        {
+            fireRate = ogFireRate;
         }
     }
 
