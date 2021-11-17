@@ -1293,24 +1293,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1624583591}
     - target: {fileID: 1744744938, guid: 8e69232dd3c74c944b21f12301425fa3, type: 3}
+      propertyPath: isEnemy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744744938, guid: 8e69232dd3c74c944b21f12301425fa3, type: 3}
       propertyPath: slowAmount
       value: 
       objectReference: {fileID: 355764324}
     - target: {fileID: 1744744938, guid: 8e69232dd3c74c944b21f12301425fa3, type: 3}
       propertyPath: positions.Array.data[0].x
-      value: -22.9
+      value: 96
       objectReference: {fileID: 0}
     - target: {fileID: 1744744938, guid: 8e69232dd3c74c944b21f12301425fa3, type: 3}
       propertyPath: positions.Array.data[0].y
-      value: -5.7
+      value: 3.337184
       objectReference: {fileID: 0}
     - target: {fileID: 1744744938, guid: 8e69232dd3c74c944b21f12301425fa3, type: 3}
       propertyPath: positions.Array.data[1].x
-      value: 3.3
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 1744744938, guid: 8e69232dd3c74c944b21f12301425fa3, type: 3}
       propertyPath: positions.Array.data[1].y
-      value: -5.7
+      value: 3.337184
       objectReference: {fileID: 0}
     - target: {fileID: 1771829130, guid: 8e69232dd3c74c944b21f12301425fa3, type: 3}
       propertyPath: boolCheck
@@ -1330,11 +1334,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3017400301330974258, guid: 8e69232dd3c74c944b21f12301425fa3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.3
+      value: 96
       objectReference: {fileID: 0}
     - target: {fileID: 3017400301330974258, guid: 8e69232dd3c74c944b21f12301425fa3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.51
+      value: 3.337184
       objectReference: {fileID: 0}
     - target: {fileID: 3017400301330974258, guid: 8e69232dd3c74c944b21f12301425fa3, type: 3}
       propertyPath: m_LocalPosition.z
