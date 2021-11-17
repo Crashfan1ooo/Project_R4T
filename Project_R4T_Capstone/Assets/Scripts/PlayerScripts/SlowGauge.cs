@@ -7,7 +7,7 @@ public class SlowGauge : MonoBehaviour
 { 
 
     public Slider slowBar;
-    private int maxSlow = 100;
+    public int maxSlow = 100;
     public float currentSlow; // do not touch in inspector
 
     private WaitForSeconds regenTick = new WaitForSeconds(0.1f);

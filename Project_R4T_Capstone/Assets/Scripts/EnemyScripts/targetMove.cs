@@ -13,10 +13,18 @@ public class targetMove : MonoBehaviour
 
     public gunShoot gun;
     public SlowGauge slowAmount;
-    // Start is called before the first frame update
+
+    //Code for enemy
+    public Transform player;
+    public bool isEnemy;
+    private Rigidbody2D rb;
+    public EnemyShoot boolCheck;
+
     void Start()
     {
+        rb = this.GetComponent<Rigidbody2D>();
         ogSpeed = speed;
+        
     }
 
     // Update is called once per frame
@@ -48,5 +56,20 @@ public class targetMove : MonoBehaviour
         {
             speed = ogSpeed;
         }
+
+        if(isEnemy)
+        {
+            actLikeEnemy();
+        }
+
+
+    }
+
+    public void actLikeEnemy()
+    {
+        Vector3 direction = player.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg -90f;
+        rb.rotation = angle;
+
     }
 }

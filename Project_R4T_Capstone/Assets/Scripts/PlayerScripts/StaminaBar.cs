@@ -40,7 +40,11 @@ public class StaminaBar : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                UseStamina(0.20f);
+                
+                
+                    UseStamina(0.20f);
+                
+                    
             }
             else if (currentStamina <= 15)
             {

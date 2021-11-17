@@ -14,7 +14,7 @@ public class EnemyShoot : MonoBehaviour
     float fireRate; // rate of fire
     float nextFire;
 
-
+    public bool canShoot;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +25,10 @@ public class EnemyShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkSpeedFire();
+        if (canShoot == true)
+        {
+            checkSpeedFire();
+        }
     }
 
     void checkSpeedFire()
@@ -33,8 +36,28 @@ public class EnemyShoot : MonoBehaviour
         if (Time.time > nextFire)
         {
             Instantiate(enemyBullet, firePoint.position, firePoint.rotation);
-           
+
             nextFire = Time.time + fireRate;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("In Zone");
+            canShoot = true;
+        }
+
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("Outzone Zone");
+            canShoot = false;
         }
     }
 }
