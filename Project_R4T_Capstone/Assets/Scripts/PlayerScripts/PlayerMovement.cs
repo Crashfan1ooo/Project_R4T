@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private float directionY;
     private bool canDoubleJump = false;
     public bool isSprinting = false;
-    public int health = 3;
+    public int health = 5;
 
     public GameObject staminaBar;
     private StaminaBar staminaBarMeter;
@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void setHealthText()
     {
-        healthText.text = "Count: " + health.ToString();
+        healthText.text = "Hit Points: " + health.ToString();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Death()
     {
-        if (health <= -2)
+        if (health <= 0)
         {
             
             isDead = true;
