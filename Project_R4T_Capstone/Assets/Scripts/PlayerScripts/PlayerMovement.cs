@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -86,6 +87,14 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(direction * characterSpeed * Time.deltaTime);
 
         Death();
+
+        if(isDead == true)
+        {
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Tutorial"))
+            {
+                SceneManager.LoadScene("Tutorial");
+            }
+        }
     }
     void setHealthText()
     {
@@ -110,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
             
             isDead = true;
             //Destroy(gameObject);
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
 
 
