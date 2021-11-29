@@ -49,10 +49,12 @@ public class PlayerMovement : MonoBehaviour
         if (controller.isGrounded)
         {
             canDoubleJump = true;
+            animator.SetBool("IsJumping", false);
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 directionY = characterJump;
+                animator.SetBool("IsJumping", true);
             }
 
         }
@@ -95,6 +97,12 @@ public class PlayerMovement : MonoBehaviour
                 SceneManager.LoadScene("Tutorial");
             }
         }
+    }
+
+    public void OnLanding()
+    {
+        animator.SetBool("IsJumping", false);
+
     }
     void setHealthText()
     {
