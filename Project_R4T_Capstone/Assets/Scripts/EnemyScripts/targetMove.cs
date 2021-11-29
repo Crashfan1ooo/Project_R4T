@@ -17,6 +17,7 @@ public class targetMove : MonoBehaviour
     //Code for enemy
     public Transform player;
     public bool isEnemy;
+    public bool isMosquito;
     private Rigidbody2D rb;
     public EnemyShoot boolCheck;
 
@@ -62,6 +63,11 @@ public class targetMove : MonoBehaviour
             actLikeEnemy();
         }
 
+        if(isMosquito)
+        {
+            actLikeMosquito();
+        }    
+
 
     }
 
@@ -71,5 +77,12 @@ public class targetMove : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg -90f;
         rb.rotation = angle;
 
+    }
+
+    public void actLikeMosquito()
+    {
+        Vector3 direction = player.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 0f;
+        rb.rotation = angle;
     }
 }
