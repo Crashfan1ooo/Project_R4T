@@ -5,10 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoad : MonoBehaviour
 {
-   
 
-    public void LoadGame(string sceneName)
+
+    //Loads the first Castle level
+    void OnTriggerEnter(Collider ChangeScene)
+    {
+        if (ChangeScene.gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
+
+    /*public void LoadGame(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
-    }
+    }*/
 }
