@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     public TextMeshProUGUI healthText;
     public bool isDead = false;
 
+    public AudioSource mouseHit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -114,6 +116,8 @@ public class PlayerMovement : MonoBehaviour
         if(collision.collider.CompareTag("EnemyBullet") || collision.collider.CompareTag("Enemy"))
         {
             health = health - 1;
+            mouseHit.Play();
+
 
             setHealthText();
             
