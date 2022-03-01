@@ -719,6 +719,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178674716186676302, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4133531029041919000, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: healthText
       value: 
@@ -775,12 +779,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 4133531029674940171, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179148507060311107, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6916458643909846948, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6916458643909846955, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_Name
+      value: CannonGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916458643909846956, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916458643909846956, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.64792
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916458643909846956, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916458643909846956, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916458643909846956, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916458643909846956, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916458643909846956, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6916458644378328159, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916458644378328224, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6916458644378328224, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
@@ -2920,7 +2968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e6bf259eeb41b42b086e5f3f987cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cannon: {fileID: 904215926}
+  cannon: {fileID: 1361553834}
   mainCam: {fileID: 1933111680}
 --- !u!1 &907256020
 GameObject:
@@ -4624,6 +4672,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0a66ba153a529794eafaa008e86240c4, type: 3}
   m_PrefabInstance: {fileID: 605775019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1361553834 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2497308326182818124, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+  m_PrefabInstance: {fileID: 337883071}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1377318405
 GameObject:

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2497308326182818124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1178674716186676302}
+  m_Layer: 0
+  m_Name: CannonHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1178674716186676302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2497308326182818124}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.23, y: 0.74, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6916458643909846956}
+  m_Father: {fileID: 4133531029041919002}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4133531029041919006
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,8 +62,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6916458644378328224}
-  - {fileID: 6916458643909846956}
   - {fileID: 4133531029674940171}
+  - {fileID: 1178674716186676302}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -121,7 +152,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 4133531029041919002}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4133531029674940164
 SpriteRenderer:
@@ -262,14 +293,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6916458643909846956}
-  - component: {fileID: 6916458643909846960}
   - component: {fileID: 6916458643909846957}
   - component: {fileID: 6916458643909846961}
   - component: {fileID: 6916458643909846962}
   - component: {fileID: 4133531029427775733}
   - component: {fileID: 6916458643909846948}
+  - component: {fileID: 6035741393924406773}
   m_Layer: 0
-  m_Name: shooterCube
+  m_Name: CannonGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,27 +314,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6916458643909846955}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.62, z: 0.64792}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.21108426, y: 0.21108426, z: 0.21108426}
   m_Children:
   - {fileID: 6916458644136269369}
-  m_Father: {fileID: 4133531029041919002}
-  m_RootOrder: 1
+  m_Father: {fileID: 1178674716186676302}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6916458643909846960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6916458643909846955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d87836240dd7cc6469f55a7252a48592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 6916458643909846957}
-  cam: {fileID: 6916458644378328159}
 --- !u!50 &6916458643909846957
 Rigidbody2D:
   serializedVersion: 4
@@ -502,6 +519,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6916458643909846957}
+--- !u!114 &6035741393924406773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6916458643909846955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e6bf259eeb41b42b086e5f3f987cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannon: {fileID: 6916458643909846955}
+  mainCam: {fileID: 6916458644378328159}
 --- !u!1 &6916458644136269368
 GameObject:
   m_ObjectHideFlags: 0
