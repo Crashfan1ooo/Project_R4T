@@ -9,6 +9,10 @@ public class gunShoot : MonoBehaviour
     public AudioSource bulletSound;
     public AudioSource slowTimeSoundFB;//Feedback for time slowing
 
+    public SlowGauge slowAmount;
+
+
+
     public float bulletSpeed = 20f;
     public float slowSpeed = 1f;
 
@@ -16,7 +20,14 @@ public class gunShoot : MonoBehaviour
 
     void Update()
     {
-        
+
+        //get slow gauge
+
+        //SlowGauge slowAmount2 = GameObject.Find("SlowGuage").GetComponents<SlowGauge>();
+        //GameObject.Find("SlowGauge").GetComponent<SlowGauge>();
+        //gameObject.
+         
+  
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -37,7 +48,7 @@ public class gunShoot : MonoBehaviour
             }
 
         }
-        if (Input.GetKeyUp(KeyCode.Mouse1)) //if button is let go stop playing sound
+        if (Input.GetKeyUp(KeyCode.Mouse1) || slowAmount.currentSlow < 1) //if button is let go stop playing sound
         {
             if(slowTimeSoundFB.isPlaying)
             {
