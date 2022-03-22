@@ -14,7 +14,9 @@ public class TimeLeech : MonoBehaviour
      * Player must shift + jump to get the leech off of them
      */
 
-    private bool isLeechin; //a bool to see if leech is active
+    [SerializeField] public bool isLeechin; //a bool to see if leech is active
+
+    [SerializeField] public SlowGauge timeDrain; //this variable is to connect the the gauge and allow the leech to drain
 
     // Start is called before the first frame update
     void Start()
@@ -25,21 +27,30 @@ public class TimeLeech : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //to see if theres a parent
         if(this.transform.parent == null)
         {
             Debug.Log("No Parent Detected");
         }
+        Debug.Log("Parent" + this.transform.parent);
 
-        if (Input.GetKeyDown(KeyCode.Space) && Input.GetKeyDown(KeyCode.LeftShift))
+
+        //to get leech off player
+        if (Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.LeftShift))
         {
-
+            LeechDetatch(); 
         }
+
+        //drains
+        LeechDrain();
     }
 
     
     void LeechDetatch() //DeParents the leech from the host
     {
         this.transform.parent = null;
+        //this.transform.Translate(new Vector3(-5, 0, 0) * Time.deltaTime);
+        isLeechin = false;
     }
 
 
@@ -49,7 +60,8 @@ public class TimeLeech : MonoBehaviour
         //this is to make sure the game has the right object before draining the player of energy 
         if(isLeechin && gameObject.transform.parent.name =="MainPlayer" && gameObject.transform.parent.CompareTag("Player"))
         {
-
+            //sucks the player of the time slow
+            timeDrain.UseSlow(0.1f);
         }
     }
 
@@ -74,7 +86,14 @@ public class TimeLeech : MonoBehaviour
             isLeechin = true;
 
         }
+
+        if(other.gameObject.CompareTag("normalBullet"))
+        {
+            Destroy(this.gameObject);
+        }
     }
+
+
 
 
 }
