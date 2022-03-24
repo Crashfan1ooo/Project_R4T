@@ -6,6 +6,8 @@ public class aggroCheck : MonoBehaviour
 {
 
     public EnemyShoot boolCheck;
+    
+    
     // Start is called before the first frame update
     private void Start()
     {

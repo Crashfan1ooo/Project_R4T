@@ -18,12 +18,15 @@ public class targetMove : MonoBehaviour
     public Transform player;
     public bool isEnemy;
     public bool isMosquito;
-    private Rigidbody2D rb;
+    private Rigidbody rb;
+    // 2D private Rigidbody2D rb;
     public EnemyShoot boolCheck;
 
     void Start()
     {
-        rb = this.GetComponent<Rigidbody2D>();
+        player = GameObject.Find("MainPlayer").transform;
+
+        rb = this.GetComponent<Rigidbody>();
         ogSpeed = speed;
         
     }
@@ -75,7 +78,7 @@ public class targetMove : MonoBehaviour
     {
         Vector3 direction = player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg -90f;
-        rb.rotation = angle;
+        rb.transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
 
     }
 
@@ -83,6 +86,6 @@ public class targetMove : MonoBehaviour
     {
         Vector3 direction = player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 0f;
-        rb.rotation = angle;
+        rb.transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
     }
 }

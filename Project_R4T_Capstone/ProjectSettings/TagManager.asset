@@ -9,6 +9,7 @@ TagManager:
   - normalBullet
   - EnemyBullet
   - Enemy
+  - Leech
   layers:
   - Default
   - TransparentFX

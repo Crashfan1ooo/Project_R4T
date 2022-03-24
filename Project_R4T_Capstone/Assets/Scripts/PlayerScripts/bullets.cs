@@ -11,12 +11,12 @@ public class bullets : MonoBehaviour
         Destroy(gameObject, 2.0f);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter(Collision collision)
     {
 
         Destroy(gameObject);
 
-        if(collision.gameObject.CompareTag("Enemy") || gameObject.CompareTag("EnemyBullet"))
+        if(collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("EnemyBullet") || collision.gameObject.CompareTag("Leech"))
         {
             Destroy(collision.gameObject);
         }

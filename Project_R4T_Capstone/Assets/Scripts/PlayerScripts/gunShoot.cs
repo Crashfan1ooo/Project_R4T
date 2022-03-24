@@ -62,9 +62,19 @@ public class gunShoot : MonoBehaviour
     void shootGun()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.GetComponent<Rigidbody>();
+        Rigidbody rb = bullet.GetComponent<Rigidbody>();
+        rb.AddForce(firePoint.up * bulletSpeed, ForceMode.Impulse);
+
+
+
+
+        //This Code works with a rigidbody2D
+        /*GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet.GetComponent<Rigidbody2D>();
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletSpeed, ForceMode2D.Impulse);
+        */
     }
 
 
