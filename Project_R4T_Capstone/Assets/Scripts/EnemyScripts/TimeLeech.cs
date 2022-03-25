@@ -21,6 +21,7 @@ public class TimeLeech : MonoBehaviour
     public Transform targetPlayer; //this is to get the leech to move toward the player
 
     public float leechSpeed; //speed of the leech
+    private float ogLeechSpeed; //original speed 
 
     public bool beginHunt; // same as inRange
 
@@ -35,6 +36,7 @@ public class TimeLeech : MonoBehaviour
         //targetPlayer = GameObject.Find("MainPlayer");
         timeDrain = GameObject.Find("Canvas Variant").transform.GetChild(0).GetComponent<SlowGauge>();
         rb = this.GetComponent<Rigidbody>();
+        ogLeechSpeed = leechSpeed;
 
 
     }
@@ -61,6 +63,17 @@ public class TimeLeech : MonoBehaviour
         
         LeechDrain();
         StartLeechMove();
+
+
+        if (Input.GetKeyDown(KeyCode.Mouse1) && timeDrain.currentSlow > 1)
+        {
+            leechSpeed = leechSpeed / 4;
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse1) || timeDrain.currentSlow <= 1)
+        {
+            leechSpeed = ogLeechSpeed;
+        }
     }
 
 
@@ -81,26 +94,21 @@ public class TimeLeech : MonoBehaviour
         if(isLeechin && gameObject.transform.parent.name =="MainPlayer" && gameObject.transform.parent.CompareTag("Player"))
         {
             //sucks the player of the time slow
-            timeDrain.UseSlow(1f);
+            timeDrain.UseSlow(0.05f);
         }
     }
 
     
-   /* void onCollisionEnter(Collision collision )
-    {
-        Debug.Log("Made contact with" + collision.gameObject);
-        if(collision.gameObject.name == "MainPlayer" || collision.gameObject.CompareTag("Player")) //should only attach to player
-        {
-            this.gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
-        }
-    }
-    */
+  
     
     private void OnTriggerEnter(Collider other)
     {
+        //test to see if collision happens
         Debug.Log("Made contact with" + other.gameObject);
+        //runs if object is turned into trigger
         if(this.gameObject.GetComponent<CapsuleCollider>().isTrigger == true)
         {
+            
             if (other.gameObject.name == "MainPlayer" && other.gameObject.CompareTag("Player")) //should only attach to player
             {
                 GameObject mainplayer = other.gameObject;
@@ -110,8 +118,10 @@ public class TimeLeech : MonoBehaviour
             }
         }
 
+        //code to interact with bullet
         if(other.gameObject.CompareTag("normalBullet"))
         {
+            this.GetComponent<CapsuleCollider>().isTrigger = false;
             Destroy(this);
             Destroy(other.gameObject);
         }
@@ -151,6 +161,8 @@ public class TimeLeech : MonoBehaviour
         direction.Normalize();
         movement = direction;
 
+
+        rb.MovePosition(transform.position + (direction * leechSpeed * Time.deltaTime));
        
         
     }

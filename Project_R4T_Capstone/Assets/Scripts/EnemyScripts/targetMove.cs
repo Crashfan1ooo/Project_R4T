@@ -6,6 +6,7 @@ public class targetMove : MonoBehaviour
 {
     public float ogSpeed;
     public float speed;
+    
     public float slowSpeedDown = 5f; //when slowing the speed of something, the slow speed has to be a value or you will get infinity.;
     public Vector3[] positions;
 
@@ -25,7 +26,7 @@ public class targetMove : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("MainPlayer").transform;
-
+        
         rb = this.GetComponent<Rigidbody>();
         ogSpeed = speed;
         
@@ -52,7 +53,8 @@ public class targetMove : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Mouse1) && slowAmount.currentSlow > 1)
         {
-            speed = speed / 4; //slowSpeedDown;
+            speed = speed / 4; //slowSpeedDown
+            
          
             
         }
