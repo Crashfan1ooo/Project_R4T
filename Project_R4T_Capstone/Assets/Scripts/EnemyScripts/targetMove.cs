@@ -26,7 +26,8 @@ public class targetMove : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("MainPlayer").transform;
-        
+        slowAmount = GameObject.Find("Canvas Variant").transform.GetChild(0).GetComponent<SlowGauge>();
+
         rb = this.GetComponent<Rigidbody>();
         ogSpeed = speed;
         

@@ -12,6 +12,7 @@ public class aggroCheck : MonoBehaviour
     private void Start()
     {
         
+        boolCheck = gameObject.GetComponentInParent<EnemyShoot>();
     }
     // Update is called once per frame
     void Update()
