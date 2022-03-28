@@ -31,7 +31,7 @@ public class gunShoot : MonoBehaviour
         //GameObject.Find("SlowGauge").GetComponent<SlowGauge>();
         //gameObject.
 
-
+        //Checks if game is paused to disable shooting
         if (!Pause.isPaused)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
