@@ -9,14 +9,29 @@ public class gunShoot : MonoBehaviour
     public AudioSource bulletSound;
     public AudioSource slowTimeSoundFB;//Feedback for time slowing
 
+    public SlowGauge slowAmount;
+
+
+
     public float bulletSpeed = 20f;
     public float slowSpeed = 1f;
 
 
+    private void Start()
+    {
+        slowAmount = GameObject.Find("Canvas Variant").transform.GetChild(0).GetComponent<SlowGauge>();
+    }
 
     void Update()
     {
-        
+
+        //get slow gauge
+
+        //SlowGauge slowAmount2 = GameObject.Find("SlowGuage").GetComponents<SlowGauge>();
+        //GameObject.Find("SlowGauge").GetComponent<SlowGauge>();
+        //gameObject.
+         
+  
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -37,7 +52,7 @@ public class gunShoot : MonoBehaviour
             }
 
         }
-        if (Input.GetKeyUp(KeyCode.Mouse1)) //if button is let go stop playing sound
+        if (Input.GetKeyUp(KeyCode.Mouse1) || slowAmount.currentSlow < 1) //if button is let go stop playing sound
         {
             if(slowTimeSoundFB.isPlaying)
             {
@@ -51,9 +66,19 @@ public class gunShoot : MonoBehaviour
     void shootGun()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.GetComponent<Rigidbody>();
+        Rigidbody rb = bullet.GetComponent<Rigidbody>();
+        rb.AddForce(firePoint.up * bulletSpeed, ForceMode.Impulse);
+
+
+
+
+        //This Code works with a rigidbody2D
+        /*GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet.GetComponent<Rigidbody2D>();
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletSpeed, ForceMode2D.Impulse);
+        */
     }
 
 

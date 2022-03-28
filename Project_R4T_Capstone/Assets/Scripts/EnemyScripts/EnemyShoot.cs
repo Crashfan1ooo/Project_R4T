@@ -15,13 +15,15 @@ public class EnemyShoot : MonoBehaviour
     float nextFire;
     private float ogFireRate;
 
-    public bool canShoot;
+    [SerializeField] public bool canShoot;
     // Start is called before the first frame update
     void Start()
     {
+        slowAmount = GameObject.Find("Canvas Variant").transform.GetChild(0).GetComponent<SlowGauge>();
         fireRate = 0.5f;
         ogFireRate = fireRate;
         nextFire = Time.time;
+        canShoot = false;
     }
 
     // Update is called once per frame

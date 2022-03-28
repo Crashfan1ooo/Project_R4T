@@ -6,6 +6,7 @@ public class targetMove : MonoBehaviour
 {
     public float ogSpeed;
     public float speed;
+    
     public float slowSpeedDown = 5f; //when slowing the speed of something, the slow speed has to be a value or you will get infinity.;
     public Vector3[] positions;
 
@@ -18,12 +19,16 @@ public class targetMove : MonoBehaviour
     public Transform player;
     public bool isEnemy;
     public bool isMosquito;
-    private Rigidbody2D rb;
+    private Rigidbody rb;
+    // 2D private Rigidbody2D rb;
     public EnemyShoot boolCheck;
 
     void Start()
     {
-        rb = this.GetComponent<Rigidbody2D>();
+        player = GameObject.Find("MainPlayer").transform;
+        slowAmount = GameObject.Find("Canvas Variant").transform.GetChild(0).GetComponent<SlowGauge>();
+
+        rb = this.GetComponent<Rigidbody>();
         ogSpeed = speed;
         
     }
@@ -49,7 +54,8 @@ public class targetMove : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Mouse1) && slowAmount.currentSlow > 1)
         {
-            speed = speed / 4; //slowSpeedDown;
+            speed = speed / 4; //slowSpeedDown
+            
          
             
         }
@@ -75,7 +81,7 @@ public class targetMove : MonoBehaviour
     {
         Vector3 direction = player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg -90f;
-        rb.rotation = angle;
+        rb.transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
 
     }
 
@@ -83,6 +89,6 @@ public class targetMove : MonoBehaviour
     {
         Vector3 direction = player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 0f;
-        rb.rotation = angle;
+        rb.transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
     }
 }
