@@ -41,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Current gravity?" + directionY);
+
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -50,6 +52,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (controller.isGrounded)
         {
+
+            directionY = 0;
+            direction.y = directionY;
+            
             canDoubleJump = true;
             animator.SetBool("IsJumping", false);
 
@@ -62,12 +68,17 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            
             if(Input.GetKeyDown(KeyCode.Space) && canDoubleJump)
             {
                 directionY = characterJump * doubleJumpMultiplier;
                 canDoubleJump = false;
             }
+
+            
         }
+
+       
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && staminaBarMeter.currentStamina > 15)
         {
@@ -85,11 +96,12 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Not enough stamina");
         }
-
+        
         directionY -= gravity * Time.deltaTime;
         direction.y = directionY;
         controller.Move(direction * characterSpeed * Time.deltaTime);
-
+        
+   
         Death();
 
         if(isDead == true)
