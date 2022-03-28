@@ -30,17 +30,18 @@ public class gunShoot : MonoBehaviour
         //SlowGauge slowAmount2 = GameObject.Find("SlowGuage").GetComponents<SlowGauge>();
         //GameObject.Find("SlowGauge").GetComponent<SlowGauge>();
         //gameObject.
-         
-  
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+
+        if (!Pause.isPaused)
         {
-            shootGun();
-            Debug.Log("Fire");
-            bulletSound.Play();
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                shootGun();
+                Debug.Log("Fire");
+                bulletSound.Play();
 
+            }
         }
-
         //the sound for this section is for the audio to play when button is held and stop when button is stopped 
         if (Input.GetKeyDown(KeyCode.Mouse1)) //if holding down the button
         {
