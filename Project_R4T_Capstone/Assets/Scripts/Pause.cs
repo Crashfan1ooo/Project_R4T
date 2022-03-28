@@ -9,6 +9,8 @@ public class Pause : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    public GameObject MainCanvas;
+
     // Update is called once per frame
     void Update()
     {
@@ -16,10 +18,12 @@ public class Pause : MonoBehaviour
         {
             if(isPaused)
             {
+                MainCanvas.SetActive(true);
                 Resume();
             }
             else
             {
+                MainCanvas.SetActive(false);
                 Paused();
             }
           
