@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         if (controller.isGrounded)
         {
 
-            directionY = 0;
+            directionY = 0.0f;
             direction.y = directionY;
             
             canDoubleJump = true;
