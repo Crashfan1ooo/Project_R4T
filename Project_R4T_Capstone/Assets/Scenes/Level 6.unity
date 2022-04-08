@@ -1926,6 +1926,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 483452605, guid: 60c823e658714d047baa9075cbd1c781, type: 3}
+      propertyPath: thePlayer
+      value: 
+      objectReference: {fileID: 1141356136}
     - target: {fileID: 6594125014813700067, guid: 60c823e658714d047baa9075cbd1c781, type: 3}
       propertyPath: m_Name
       value: Canvas Variant
@@ -3054,6 +3058,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 013d3466564d64447a233a7a9dfe4292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1141356136 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4133531029041919006, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+  m_PrefabInstance: {fileID: 1141356133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1221490479
 GameObject:
   m_ObjectHideFlags: 0
