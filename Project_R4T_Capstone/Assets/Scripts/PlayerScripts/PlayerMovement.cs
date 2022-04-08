@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private CharacterController controller;
     public Animator animator;
+    
    
 
     [SerializeField] public float characterSpeed = 12f;
