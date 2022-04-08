@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private CharacterController controller;
     public Animator animator;
+    
    
 
     [SerializeField] public float characterSpeed = 12f;
@@ -47,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
+        
 
         Vector3 direction = new Vector3(horizontalInput, 0, 0);
 
@@ -58,11 +60,13 @@ public class PlayerMovement : MonoBehaviour
             
             canDoubleJump = true;
             animator.SetBool("IsJumping", false);
+            animator.SetBool("Landed", true);
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 directionY = characterJump;
                 animator.SetBool("IsJumping", true);
+                animator.SetBool("Landed", false);
             }
 
         }
@@ -116,6 +120,7 @@ public class PlayerMovement : MonoBehaviour
     public void OnLanding()
     {
         animator.SetBool("IsJumping", false);
+        animator.SetBool("Landed", true);
 
     }
     void setHealthText()

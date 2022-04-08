@@ -17,6 +17,10 @@ public class gunShoot : MonoBehaviour
     public float slowSpeed = 1f;
 
 
+    private float rateOfire = 1f; //fire rate
+    private float nextFire = 0f; //idk  anymore heres the reference i guess: https://www.youtube.com/watch?v=Kvd4Fnb9EPo 
+
+
     private void Start()
     {
         slowAmount = GameObject.Find("Canvas Variant").transform.GetChild(0).GetComponent<SlowGauge>();
@@ -24,7 +28,7 @@ public class gunShoot : MonoBehaviour
 
     void Update()
     {
-
+        Debug.Log("rate of fire: " + Time.time + "next fire" + nextFire);
         //get slow gauge
 
         //SlowGauge slowAmount2 = GameObject.Find("SlowGuage").GetComponents<SlowGauge>();
@@ -36,11 +40,15 @@ public class gunShoot : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                shootGun();
-                Debug.Log("Fire");
-                bulletSound.Play();
+                if (Time.time > nextFire)
+                {
+                    nextFire = Time.time + rateOfire;
 
-            }
+                    shootGun();
+                    Debug.Log("Fire");
+                    bulletSound.Play();
+                    
+                }
         }
         //the sound for this section is for the audio to play when button is held and stop when button is stopped 
         if (Input.GetKeyDown(KeyCode.Mouse1)) //if holding down the button
@@ -66,10 +74,16 @@ public class gunShoot : MonoBehaviour
 
     void shootGun()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<Rigidbody>();
-        Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        rb.AddForce(firePoint.up * bulletSpeed, ForceMode.Impulse);
+
+       
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            bullet.GetComponent<Rigidbody>();
+            Rigidbody rb = bullet.GetComponent<Rigidbody>();
+            rb.AddForce(firePoint.up * bulletSpeed, ForceMode.Impulse);
+
+           
+        }
+       
 
 
 
@@ -83,5 +97,6 @@ public class gunShoot : MonoBehaviour
     }
 
 
+    
 }
 
