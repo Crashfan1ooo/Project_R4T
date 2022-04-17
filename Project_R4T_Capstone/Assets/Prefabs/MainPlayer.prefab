@@ -85,7 +85,13 @@ MonoBehaviour:
   gravity: 8
   doubleJumpMultiplier: 0.5
   isSprinting: 0
-  health: 3
+  health: 5
+  HPTicks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   staminaBar: {fileID: 0}
   healthText: {fileID: 0}
   isDead: 0

@@ -28,7 +28,7 @@ public class gunShoot : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("rate of fire: " + Time.time + "next fire" + nextFire);
+        //Debug.Log("rate of fire: " + Time.time + "next fire" + nextFire);
         //get slow gauge
 
         //SlowGauge slowAmount2 = GameObject.Find("SlowGuage").GetComponents<SlowGauge>();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
     private bool canDoubleJump = false;
     public bool isSprinting = false;
     public int health = 5;
+    
+
+    public Image[] HPTicks;
+
 
     public GameObject staminaBar;
     private StaminaBar staminaBarMeter;
@@ -36,13 +41,13 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         staminaBarMeter = staminaBar.GetComponent<StaminaBar>();
 
-        setHealthText();
+        //setHealthText();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Current gravity?" + directionY);
+        //Debug.Log("Current gravity?" + directionY);
 
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -104,9 +109,69 @@ public class PlayerMovement : MonoBehaviour
         directionY -= gravity * Time.deltaTime;
         direction.y = directionY;
         controller.Move(direction * characterSpeed * Time.deltaTime);
+
         
+
+       switch(health)
+       {
+            case 5:
+                HPTicks[4].gameObject.SetActive(true);
+                HPTicks[3].gameObject.SetActive(true);
+                HPTicks[2].gameObject.SetActive(true);
+                HPTicks[1].gameObject.SetActive(true);
+                HPTicks[0].gameObject.SetActive(true);
+                break;
+
+            case 4:
+                HPTicks[4].gameObject.SetActive(false);
+                HPTicks[3].gameObject.SetActive(true);
+                HPTicks[2].gameObject.SetActive(true);
+                HPTicks[1].gameObject.SetActive(true);
+                HPTicks[0].gameObject.SetActive(true);
+                break;
+
+
+            case 3:
+                HPTicks[4].gameObject.SetActive(false);
+                HPTicks[3].gameObject.SetActive(false);
+                HPTicks[2].gameObject.SetActive(true);
+                HPTicks[1].gameObject.SetActive(true);
+                HPTicks[0].gameObject.SetActive(true);
+                break;
+
+            case 2:
+                HPTicks[4].gameObject.SetActive(false);
+                HPTicks[3].gameObject.SetActive(false);
+                HPTicks[2].gameObject.SetActive(false);
+                HPTicks[1].gameObject.SetActive(true);
+                HPTicks[0].gameObject.SetActive(true);
+                break;
+
+            case 1:
+                HPTicks[4].gameObject.SetActive(false);
+                HPTicks[3].gameObject.SetActive(false);
+                HPTicks[2].gameObject.SetActive(false);
+                HPTicks[1].gameObject.SetActive(false);
+                HPTicks[0].gameObject.SetActive(true);
+                break;
+
+            case 0:
+                HPTicks[4].gameObject.SetActive(false);
+                HPTicks[3].gameObject.SetActive(false);
+                HPTicks[2].gameObject.SetActive(false);
+                HPTicks[1].gameObject.SetActive(false);
+                HPTicks[0].gameObject.SetActive(false);
+                Death();
+                break;
+
+
+
+
+       }
+
+            
    
-        Death();
+       
 
         if(isDead == true)
         {
@@ -123,10 +188,10 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("Landed", true);
 
     }
-    void setHealthText()
+    /*void setHealthText()
     {
         healthText.text = "Hit Points: " + health.ToString();
-    }
+    }*/
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -136,7 +201,7 @@ public class PlayerMovement : MonoBehaviour
             mouseHit.Play();
 
 
-            setHealthText();
+            //setHealthText();
             
         }
     }
