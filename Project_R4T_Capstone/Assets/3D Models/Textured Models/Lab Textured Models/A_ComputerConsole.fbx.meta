@@ -3,7 +3,37 @@ guid: 3be5364a790e6e1419b632469f8121c9
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ComputerConsoleBaseM_Base_color
+    second: {fileID: 2800000, guid: 661c514815b4d9f45834b4e4055597f3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ComputerConsoleBaseM_Roughness
+    second: {fileID: 2800000, guid: 7840399a17ead3a4fbf2327881abbcd7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ComputerConsoleColor2M_Base_color
+    second: {fileID: 2800000, guid: 8a5cd84d0b92e234e9aa5e84653788a1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ComputerConsoleColor2M_Roughness
+    second: {fileID: 2800000, guid: 92bc5b1ae8ddc394e8c3f62158ca5433, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ComputerConsoleScreenM_Base_color
+    second: {fileID: 2800000, guid: ec17fe64d19c3b546a765b165c5a1dec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ComputerConsoleScreenM_Roughness
+    second: {fileID: 2800000, guid: 4e81ea0a91b10394a9be34ee3f19b282, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
