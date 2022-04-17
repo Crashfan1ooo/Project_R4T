@@ -175,10 +175,8 @@ public class PlayerMovement : MonoBehaviour
 
         if(isDead == true)
         {
-            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Tutorial"))
-            {
-                SceneManager.LoadScene("Tutorial");
-            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         }
     }
 
