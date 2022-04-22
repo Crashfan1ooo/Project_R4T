@@ -34,7 +34,7 @@ public class TimeLeech : MonoBehaviour
     {
         isLeechin = false;
         //targetPlayer = GameObject.Find("MainPlayer");
-        timeDrain = GameObject.Find("Canvas Variant").transform.GetChild(0).GetComponent<SlowGauge>();
+        timeDrain = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<SlowGauge>();
         rb = this.GetComponent<Rigidbody>();
         ogLeechSpeed = leechSpeed;
 

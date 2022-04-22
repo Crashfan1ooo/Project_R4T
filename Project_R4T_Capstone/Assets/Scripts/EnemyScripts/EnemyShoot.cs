@@ -19,7 +19,7 @@ public class EnemyShoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        slowAmount = GameObject.Find("Canvas Variant").transform.GetChild(0).GetComponent<SlowGauge>();
+        slowAmount = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<SlowGauge>();
         fireRate = 0.5f;
         ogFireRate = fireRate;
         nextFire = Time.time;
