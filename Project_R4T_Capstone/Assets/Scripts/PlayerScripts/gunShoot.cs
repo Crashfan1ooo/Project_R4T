@@ -23,7 +23,7 @@ public class gunShoot : MonoBehaviour
 
     private void Start()
     {
-        slowAmount = GameObject.Find("Canvas Variant").transform.GetChild(0).GetComponent<SlowGauge>();
+        slowAmount = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<SlowGauge>();
     }
 
     void Update()

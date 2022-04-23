@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.46361506, g: 0.47342068, b: 0.44694924, a: 1}
+  m_IndirectSpecularColor: {r: 0.46361423, g: 0.4734205, b: 0.44694865, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1190,7 +1190,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -0.000000006165209}
+  m_BoundingSphereOverride: {x: 1.8826368e+30, y: NaN, z: NaN, w: -9.7259566e-36}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2217,7 +2217,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 2.513e-42, y: NaN, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2930,7 +2930,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -2.0961137e-18, z: 0, w: 2.3500633e+31}
+  m_BoundingSphereOverride: {x: 1.0123e-41, y: 1.04e-43, z: 2.77e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -4110,7 +4110,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -0, y: -0, z: 1, w: 0.0915419}
+  m_BoundingSphereOverride: {x: 0, y: -17.392822, z: 9.39e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -4203,7 +4203,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -339.59155, z: 4.5904e-41, w: 0}
+  m_BoundingSphereOverride: {x: NaN, y: 8.3e-44, z: 4.5904e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -5186,7 +5186,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1e-45}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -6327,7 +6327,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: NaN, z: 3.436708e+10, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 3.8851975e-20, z: 4.5904e-41, w: 1.536e-42}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -6952,7 +6952,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -0.000000003913108, z: 6.9e-43, w: 7.22e-43}
+  m_BoundingSphereOverride: {x: 0, y: -15.666351, z: 9.39e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -7788,7 +7788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6594125014813700067, guid: 60c823e658714d047baa9075cbd1c781, type: 3}
       propertyPath: m_Name
-      value: Canvas Variant
+      value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 6594125014813700069, guid: 60c823e658714d047baa9075cbd1c781, type: 3}
       propertyPath: m_UiScaleMode
@@ -7973,6 +7973,76 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7d75bfe72d77de447a8a09fb427dd5d5, type: 3}
   m_PrefabInstance: {fileID: 1786686603}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1795602601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6916458644378328156, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+  m_PrefabInstance: {fileID: 337883071}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1795602602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795602601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1795602604}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 1
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 1
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
+--- !u!4 &1795602604 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6916458644378328224, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+  m_PrefabInstance: {fileID: 337883071}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1830012591
 PrefabInstance:
@@ -8945,6 +9015,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddec5aec6ef8c8644b92c0779168e70c, type: 3}
+--- !u!1001 &2018164241
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 410154229955844864, guid: 3373459aba6cf0f49bb9c03657506572, type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 410154229955844864, guid: 3373459aba6cf0f49bb9c03657506572, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410154229955844864, guid: 3373459aba6cf0f49bb9c03657506572, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410154229955844864, guid: 3373459aba6cf0f49bb9c03657506572, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410154229955844864, guid: 3373459aba6cf0f49bb9c03657506572, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 410154229955844864, guid: 3373459aba6cf0f49bb9c03657506572, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410154229955844864, guid: 3373459aba6cf0f49bb9c03657506572, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410154229955844864, guid: 3373459aba6cf0f49bb9c03657506572, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410154229955844864, guid: 3373459aba6cf0f49bb9c03657506572, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410154229955844864, guid: 3373459aba6cf0f49bb9c03657506572, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410154229955844864, guid: 3373459aba6cf0f49bb9c03657506572, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410154229955844894, guid: 3373459aba6cf0f49bb9c03657506572, type: 3}
+      propertyPath: m_Name
+      value: PostProcessProfile
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3373459aba6cf0f49bb9c03657506572, type: 3}
 --- !u!4 &2026706239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 92b07a835af92184fba12c0bea116221, type: 3}
