@@ -16,8 +16,14 @@ public class PostPEffects : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //important stuff
+
+        //talks to the slow gauge
         timeDrain = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<SlowGauge>();
+        //gets the postprocessprofile
         _postProcessVolume = GameObject.Find("PostProcessProfile").GetComponent<PostProcessVolume>();
+
+        //talk to all the settings currently in use
         _postProcessVolume.profile.TryGetSettings(out _cA);
         _postProcessVolume.profile.TryGetSettings(out _bL);
         _postProcessVolume.profile.TryGetSettings(out _gR);
@@ -25,6 +31,7 @@ public class PostPEffects : MonoBehaviour
 
     private void Update()
     {
+        //current effects in play
         ChromaticAberration();
         Bloom();
         Grain();
@@ -35,16 +42,22 @@ public class PostPEffects : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1) && timeDrain.currentSlow > 1)
         {
             _cA.active = true;
+            //sets all the overides to on
+            //show effects
             _cA.SetAllOverridesTo(true);
         }
         if (Input.GetKeyUp(KeyCode.Mouse1) || timeDrain.currentSlow <= 1)
         {
 
+            //turns the overides off
+            //no effects
             _cA.SetAllOverridesTo(false);
         }
 
 
     }
+
+    //code repeats down below
 
     public void Bloom()
     {
