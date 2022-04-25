@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && staminaBarMeter.currentStamina > 15)
         {
             
-            StaminaBar.instance.UseStamina(15);
+            //StaminaBar.UseStamina(15);
             characterSpeed = characterSpeed * 2;
 
         }
