@@ -56,7 +56,7 @@ public class StaminaBar : MonoBehaviour
         }
 
 
-        if (currentStamina == 120)
+        if (currentStamina >= 120)
         {
             STTicks[11].gameObject.SetActive(true);
             STTicks[10].gameObject.SetActive(true);
