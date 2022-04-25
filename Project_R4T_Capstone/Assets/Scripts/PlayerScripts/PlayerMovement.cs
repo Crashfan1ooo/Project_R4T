@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     public GameObject staminaBar;
-    private StaminaBar staminaBarMeter;
+    //private StaminaBar staminaBarMeter;
     public TextMeshProUGUI healthText;
     public bool isDead = false;
 
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     {
         originalSpeed = characterSpeed;
         controller = GetComponent<CharacterController>();
-        staminaBarMeter = staminaBar.GetComponent<StaminaBar>();
+        //staminaBarMeter = staminaBar.GetComponent<StaminaBar>();
 
         //setHealthText();
     }
@@ -89,23 +89,23 @@ public class PlayerMovement : MonoBehaviour
 
        
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && staminaBarMeter.currentStamina > 15)
+        if (Input.GetKeyDown(KeyCode.LeftShift) /*&& staminaBarMeter.currentStamina > 15*/)
         {
             
             //StaminaBar.UseStamina(15);
             characterSpeed = characterSpeed * 2;
 
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift) || staminaBarMeter.currentStamina <=15)
+        else if (Input.GetKeyUp(KeyCode.LeftShift) /* || staminaBarMeter.currentStamina <=15*/)
         {
             characterSpeed = originalSpeed;
         
         }
-        if(staminaBarMeter.currentStamina <=15)
+        /*if(staminaBarMeter.currentStamina <=15)
         {
             Debug.Log("Not enough stamina");
         }
-        
+        */
         directionY -= gravity * Time.deltaTime;
         direction.y = directionY;
         controller.Move(direction * characterSpeed * Time.deltaTime);
