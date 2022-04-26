@@ -87,7 +87,7 @@ public class StaminaBar : MonoBehaviour
             STTicks[1].gameObject.SetActive(true);
             STTicks[0].gameObject.SetActive(true);
         }
-        else if(currentStamina < 110 && currentStamina>= 101)
+        else if(currentStamina < 111 && currentStamina>= 101)
         {
             STTicks[11].gameObject.SetActive(false);
             STTicks[10].gameObject.SetActive(false);
@@ -102,7 +102,7 @@ public class StaminaBar : MonoBehaviour
             STTicks[1].gameObject.SetActive(true);
             STTicks[0].gameObject.SetActive(true);
         }
-        else if(currentStamina < 100 && currentStamina >= 91)
+        else if(currentStamina < 101 && currentStamina >= 91)
         {
             STTicks[11].gameObject.SetActive(false);
             STTicks[10].gameObject.SetActive(false);
@@ -117,7 +117,7 @@ public class StaminaBar : MonoBehaviour
             STTicks[1].gameObject.SetActive(true);
             STTicks[0].gameObject.SetActive(true);
         }
-        else if (currentStamina < 90 && currentStamina >= 81)
+        else if (currentStamina < 91 && currentStamina >= 81)
         {
             STTicks[11].gameObject.SetActive(false);
             STTicks[10].gameObject.SetActive(false);
@@ -132,7 +132,7 @@ public class StaminaBar : MonoBehaviour
             STTicks[1].gameObject.SetActive(true);
             STTicks[0].gameObject.SetActive(true);
         }
-        else if (currentStamina < 80 && currentStamina >= 71)
+        else if (currentStamina < 81 && currentStamina >= 71)
         {
             STTicks[11].gameObject.SetActive(false);
             STTicks[10].gameObject.SetActive(false);
@@ -147,7 +147,7 @@ public class StaminaBar : MonoBehaviour
             STTicks[1].gameObject.SetActive(true);
             STTicks[0].gameObject.SetActive(true);
         }
-        else if (currentStamina < 70 && currentStamina >= 61)
+        else if (currentStamina < 71 && currentStamina >= 61)
         {
             STTicks[11].gameObject.SetActive(false);
             STTicks[10].gameObject.SetActive(false);
@@ -162,7 +162,7 @@ public class StaminaBar : MonoBehaviour
             STTicks[1].gameObject.SetActive(true);
             STTicks[0].gameObject.SetActive(true);
         }
-        else if (currentStamina < 60 && currentStamina >= 51)
+        else if (currentStamina < 61 && currentStamina >= 51)
         {
             STTicks[11].gameObject.SetActive(false);
             STTicks[10].gameObject.SetActive(false);
@@ -177,7 +177,7 @@ public class StaminaBar : MonoBehaviour
             STTicks[1].gameObject.SetActive(true);
             STTicks[0].gameObject.SetActive(true);
         }
-        else if (currentStamina < 50 && currentStamina >= 41)
+        else if (currentStamina < 51 && currentStamina >= 41)
         {
             STTicks[11].gameObject.SetActive(false);
             STTicks[10].gameObject.SetActive(false);
@@ -192,7 +192,7 @@ public class StaminaBar : MonoBehaviour
             STTicks[1].gameObject.SetActive(true);
             STTicks[0].gameObject.SetActive(true);
         }
-        else if (currentStamina < 40 && currentStamina >= 31)
+        else if (currentStamina < 41 && currentStamina >= 31)
         {
             STTicks[11].gameObject.SetActive(false);
             STTicks[10].gameObject.SetActive(false);
@@ -207,7 +207,7 @@ public class StaminaBar : MonoBehaviour
             STTicks[1].gameObject.SetActive(true);
             STTicks[0].gameObject.SetActive(true);
         }
-        else if (currentStamina < 30 && currentStamina >= 21)
+        else if (currentStamina < 31 && currentStamina >= 21)
         {
             STTicks[11].gameObject.SetActive(false);
             STTicks[10].gameObject.SetActive(false);
@@ -222,7 +222,7 @@ public class StaminaBar : MonoBehaviour
             STTicks[1].gameObject.SetActive(true);
             STTicks[0].gameObject.SetActive(true);
         }
-        else if (currentStamina < 20 && currentStamina >= 11)
+        else if (currentStamina < 21 && currentStamina >= 11)
         {
             STTicks[11].gameObject.SetActive(false);
             STTicks[10].gameObject.SetActive(false);
@@ -237,7 +237,7 @@ public class StaminaBar : MonoBehaviour
             STTicks[1].gameObject.SetActive(false);
             STTicks[0].gameObject.SetActive(true);
         }
-        else if (currentStamina < 10 && currentStamina >= 1)
+        else if (currentStamina < 11 && currentStamina >= 1)
         {
             STTicks[11].gameObject.SetActive(false);
             STTicks[10].gameObject.SetActive(false);
