@@ -19,7 +19,7 @@ public class PostPEffects : MonoBehaviour
         //important stuff
 
         //talks to the slow gauge
-        timeDrain = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<SlowGauge>();
+        timeDrain = GameObject.Find("Canvas").transform.GetChild(2).GetComponent<SlowGauge>();
         //gets the postprocessprofile
         _postProcessVolume = GameObject.Find("PostProcessProfile").GetComponent<PostProcessVolume>();
 

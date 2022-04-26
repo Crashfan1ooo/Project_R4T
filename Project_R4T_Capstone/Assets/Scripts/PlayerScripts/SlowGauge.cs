@@ -136,7 +136,7 @@ public class SlowGauge : MonoBehaviour
             SlowGTicks[1].gameObject.SetActive(false);
             SlowGTicks[0].gameObject.SetActive(false);
         }
-        else if (currentSlow < 12.5 && currentSlow >= 0)
+        else if (currentSlow < 12.5 && currentSlow > 0)
         {
             SlowGTicks[7].gameObject.SetActive(true);
             SlowGTicks[6].gameObject.SetActive(false);
