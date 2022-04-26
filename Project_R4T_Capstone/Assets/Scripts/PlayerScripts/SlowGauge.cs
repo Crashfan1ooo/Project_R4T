@@ -17,6 +17,8 @@ public class SlowGauge : MonoBehaviour
 
     public gunShoot gun;
 
+    public Image[] SlowGTicks;
+
 
     private void Awake()
     {
@@ -44,6 +46,117 @@ public class SlowGauge : MonoBehaviour
                 slowBar.value = currentSlow;
                 gun.slowSpeed = 1f;
             }
+        }
+
+        if(currentSlow == 100)
+        {
+            SlowGTicks[7].gameObject.SetActive(true);
+            SlowGTicks[6].gameObject.SetActive(true);
+            SlowGTicks[5].gameObject.SetActive(true);
+            SlowGTicks[4].gameObject.SetActive(true);
+            SlowGTicks[3].gameObject.SetActive(true);
+            SlowGTicks[2].gameObject.SetActive(true);
+            SlowGTicks[1].gameObject.SetActive(true);
+            SlowGTicks[0].gameObject.SetActive(true);
+        }
+        else if(currentSlow < 100 && currentSlow >= 87.5 )
+        {
+            SlowGTicks[7].gameObject.SetActive(true);
+            SlowGTicks[6].gameObject.SetActive(true);
+            SlowGTicks[5].gameObject.SetActive(true);
+            SlowGTicks[4].gameObject.SetActive(true);
+            SlowGTicks[3].gameObject.SetActive(true);
+            SlowGTicks[2].gameObject.SetActive(true);
+            SlowGTicks[1].gameObject.SetActive(true);
+            SlowGTicks[0].gameObject.SetActive(false);
+        }
+        else if (currentSlow < 87.5 && currentSlow >= 75)
+        {
+            SlowGTicks[7].gameObject.SetActive(true);
+            SlowGTicks[6].gameObject.SetActive(true);
+            SlowGTicks[5].gameObject.SetActive(true);
+            SlowGTicks[4].gameObject.SetActive(true);
+            SlowGTicks[3].gameObject.SetActive(true);
+            SlowGTicks[2].gameObject.SetActive(true);
+            SlowGTicks[1].gameObject.SetActive(false);
+            SlowGTicks[0].gameObject.SetActive(false);
+        }
+        else if (currentSlow < 75 && currentSlow >= 62.5)
+        {
+            SlowGTicks[7].gameObject.SetActive(true);
+            SlowGTicks[6].gameObject.SetActive(true);
+            SlowGTicks[5].gameObject.SetActive(true);
+            SlowGTicks[4].gameObject.SetActive(true);
+            SlowGTicks[3].gameObject.SetActive(true);
+            SlowGTicks[2].gameObject.SetActive(false);
+            SlowGTicks[1].gameObject.SetActive(false);
+            SlowGTicks[0].gameObject.SetActive(false);
+        }
+        else if (currentSlow < 62.5 && currentSlow >= 50)
+        {
+            SlowGTicks[7].gameObject.SetActive(true);
+            SlowGTicks[6].gameObject.SetActive(true);
+            SlowGTicks[5].gameObject.SetActive(true);
+            SlowGTicks[4].gameObject.SetActive(true);
+            SlowGTicks[3].gameObject.SetActive(false);
+            SlowGTicks[2].gameObject.SetActive(false);
+            SlowGTicks[1].gameObject.SetActive(false);
+            SlowGTicks[0].gameObject.SetActive(false);
+        }
+        else if (currentSlow < 50 && currentSlow >= 37.5)
+        {
+            SlowGTicks[7].gameObject.SetActive(true);
+            SlowGTicks[6].gameObject.SetActive(true);
+            SlowGTicks[5].gameObject.SetActive(true);
+            SlowGTicks[4].gameObject.SetActive(false);
+            SlowGTicks[3].gameObject.SetActive(false);
+            SlowGTicks[2].gameObject.SetActive(false);
+            SlowGTicks[1].gameObject.SetActive(false);
+            SlowGTicks[0].gameObject.SetActive(false);
+        }
+        else if (currentSlow < 37.5 && currentSlow >= 25)
+        {
+            SlowGTicks[7].gameObject.SetActive(true);
+            SlowGTicks[6].gameObject.SetActive(true);
+            SlowGTicks[5].gameObject.SetActive(false);
+            SlowGTicks[4].gameObject.SetActive(false);
+            SlowGTicks[3].gameObject.SetActive(false);
+            SlowGTicks[2].gameObject.SetActive(false);
+            SlowGTicks[1].gameObject.SetActive(false);
+            SlowGTicks[0].gameObject.SetActive(false);
+        }
+        else if (currentSlow < 25 && currentSlow >= 12.5)
+        {
+            SlowGTicks[7].gameObject.SetActive(true);
+            SlowGTicks[6].gameObject.SetActive(false);
+            SlowGTicks[5].gameObject.SetActive(false);
+            SlowGTicks[4].gameObject.SetActive(false);
+            SlowGTicks[3].gameObject.SetActive(false);
+            SlowGTicks[2].gameObject.SetActive(false);
+            SlowGTicks[1].gameObject.SetActive(false);
+            SlowGTicks[0].gameObject.SetActive(false);
+        }
+        else if (currentSlow < 12.5 && currentSlow >= 0)
+        {
+            SlowGTicks[7].gameObject.SetActive(true);
+            SlowGTicks[6].gameObject.SetActive(false);
+            SlowGTicks[5].gameObject.SetActive(false);
+            SlowGTicks[4].gameObject.SetActive(false);
+            SlowGTicks[3].gameObject.SetActive(false);
+            SlowGTicks[2].gameObject.SetActive(false);
+            SlowGTicks[1].gameObject.SetActive(false);
+            SlowGTicks[0].gameObject.SetActive(false);
+        }
+        else
+        {
+            SlowGTicks[7].gameObject.SetActive(false);
+            SlowGTicks[6].gameObject.SetActive(false);
+            SlowGTicks[5].gameObject.SetActive(false);
+            SlowGTicks[4].gameObject.SetActive(false);
+            SlowGTicks[3].gameObject.SetActive(false);
+            SlowGTicks[2].gameObject.SetActive(false);
+            SlowGTicks[1].gameObject.SetActive(false);
+            SlowGTicks[0].gameObject.SetActive(false);
         }
     }
 
