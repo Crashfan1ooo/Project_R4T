@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class StaminaBar : MonoBehaviour
 {
-    public Slider staminaBar;
+    //public Slider staminaBar;
 
     private int maxStamina = 120;
     public float currentStamina;
@@ -32,8 +32,8 @@ public class StaminaBar : MonoBehaviour
         thePlayerMovement = thePlayer.GetComponent<PlayerMovement>();
 
         currentStamina = maxStamina;
-        staminaBar.maxValue = maxStamina;
-        staminaBar.value = maxStamina;
+        //staminaBar.maxValue = maxStamina;
+        //staminaBar.value = maxStamina;
     }
 
 
@@ -51,13 +51,13 @@ public class StaminaBar : MonoBehaviour
             }
             else if (currentStamina <= 15)
             {
-                staminaBar.value = currentStamina;
+                //staminaBar.value = currentStamina;
             }
         }
 
 
                 
-                if (currentStamina >= 120)
+        if (currentStamina >= 120)
         {
             STTicks[11].gameObject.SetActive(true);
             STTicks[10].gameObject.SetActive(true);
@@ -279,7 +279,7 @@ public class StaminaBar : MonoBehaviour
         {
             
             currentStamina -= amount;
-            staminaBar.value = currentStamina;
+            //staminaBar.value = currentStamina;
 
            
 
@@ -304,7 +304,7 @@ public class StaminaBar : MonoBehaviour
         while(currentStamina < maxStamina)
         {
             currentStamina += maxStamina / 120;
-            staminaBar.value = currentStamina;
+            //staminaBar.value = currentStamina;
             yield return regenTick;
         }
 
