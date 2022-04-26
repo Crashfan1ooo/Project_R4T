@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SlowGauge : MonoBehaviour
 { 
 
-    public Slider slowBar;
+    //public Slider slowBar;
     public int maxSlow = 100;
     public float currentSlow; // do not touch in inspector
 
@@ -28,8 +28,8 @@ public class SlowGauge : MonoBehaviour
     void Start()
     {
         currentSlow = maxSlow;
-        slowBar.maxValue = maxSlow;
-        slowBar.value = maxSlow;
+        //slowBar.maxValue = maxSlow;
+        //slowBar.value = maxSlow;
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class SlowGauge : MonoBehaviour
             }
             else if (currentSlow <= 1)
             {
-                slowBar.value = currentSlow;
+                //slowBar.value = currentSlow;
                 gun.slowSpeed = 1f;
             }
         }
@@ -165,7 +165,7 @@ public class SlowGauge : MonoBehaviour
         if(currentSlow -amount >= 0)
         {
             currentSlow -= amount;
-            slowBar.value = currentSlow;
+            //slowBar.value = currentSlow;
 
             if(regen != null)
             {
@@ -186,7 +186,7 @@ public class SlowGauge : MonoBehaviour
         while (currentSlow < maxSlow)
         {
             currentSlow += maxSlow / 100;
-            slowBar.value = currentSlow;
+            //slowBar.value = currentSlow;
             yield return regenTick;
         }
     }
