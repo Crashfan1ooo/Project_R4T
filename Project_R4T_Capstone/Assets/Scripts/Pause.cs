@@ -19,6 +19,7 @@ public class Pause : MonoBehaviour
             if(isPaused)
             {
                 MainCanvas.SetActive(true);
+                Debug.Log("Paused");
                 Resume();
             }
             else
