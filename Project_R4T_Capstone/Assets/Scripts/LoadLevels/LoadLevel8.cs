@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadLevel7 : MonoBehaviour
+public class LoadLevel8 : MonoBehaviour
 {
-    //Loads level 7
+    //Loads level 8
     void OnTriggerEnter(Collider ChangeScene)
     {
         if (ChangeScene.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(9);
         }
     }
 }
