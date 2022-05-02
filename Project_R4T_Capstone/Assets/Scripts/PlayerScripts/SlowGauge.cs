@@ -159,7 +159,7 @@ public class SlowGauge : MonoBehaviour
             SlowGTicks[0].gameObject.SetActive(false);
         }
 
-        Debug.Log(currentSlow);
+        
     }
 
     public void UseSlow(float amount)
