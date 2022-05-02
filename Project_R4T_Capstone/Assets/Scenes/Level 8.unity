@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.27276337, g: 0.30274618, b: 0.35213023, a: 1}
+  m_IndirectSpecularColor: {r: 0.27276307, g: 0.30274573, b: 0.35212958, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7404,7 +7404,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1178674716186676302, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4133531029041919000, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: healthText
@@ -7484,7 +7484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6916458643909846956, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4.7
       objectReference: {fileID: 0}
     - target: {fileID: 6916458643909846961, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: slowAmount

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2731825, g: 0.30326656, b: 0.3525894, a: 1}
+  m_IndirectSpecularColor: {r: 0.27318206, g: 0.3032661, b: 0.35258868, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -375,7 +375,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.8e-43, y: NaN, z: 1.81e-43, w: 1.56e-43}
+  m_BoundingSphereOverride: {x: 4.157613e+21, y: 1.12520376e+24, z: 1.817742e+31, w: 1.8050527e+28}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -4651,7 +4651,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1178674716186676302, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4133531029041919000, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: healthText
@@ -4735,7 +4735,7 @@ PrefabInstance:
       objectReference: {fileID: 1942456511}
     - target: {fileID: 6916458643909846956, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4.7
       objectReference: {fileID: 0}
     - target: {fileID: 6916458643909846961, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: slowAmount

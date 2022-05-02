@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1178674716186676302}
+  - component: {fileID: 4208279408546066951}
   m_Layer: 0
   m_Name: CannonHolder
   m_TagString: Untagged
@@ -24,13 +25,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2497308326182818124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23, y: 0.74, z: 0}
+  m_LocalPosition: {x: 0.23, y: 0.74, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6916458643909846956}
   m_Father: {fileID: 4133531029041919002}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4208279408546066951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2497308326182818124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e6bf259eeb41b42b086e5f3f987cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannon: {fileID: 6916458643909846955}
+  mainCam: {fileID: 6916458644378328159}
 --- !u!1 &4133531029041919006
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,7 +112,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   staminaBar: {fileID: 0}
-  healthText: {fileID: 0}
   isDead: 0
   mouseHit: {fileID: 6331790440839097697}
 --- !u!143 &4133531029041919001
@@ -572,7 +586,6 @@ GameObject:
   - component: {fileID: 4133531029427775733}
   - component: {fileID: 6916458643909846948}
   - component: {fileID: 904215933}
-  - component: {fileID: 904215928}
   - component: {fileID: 2705564398961476924}
   - component: {fileID: 6536002443720598277}
   m_Layer: 0
@@ -590,7 +603,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6916458643909846955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.64792}
+  m_LocalPosition: {x: 0, y: 0, z: -4.7}
   m_LocalScale: {x: 0.21108426, y: 0.21108426, z: 0.21108426}
   m_Children:
   - {fileID: 6916458644136269369}
@@ -893,20 +906,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &904215928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6916458643909846955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37e6bf259eeb41b42b086e5f3f987cc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cannon: {fileID: 2497308326182818124}
-  mainCam: {fileID: 6916458644378328159}
 --- !u!82 &2705564398961476924
 AudioSource:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2724137, g: 0.3023141, b: 0.35174045, a: 1}
+  m_IndirectSpecularColor: {r: 0.27241352, g: 0.30231357, b: 0.35173976, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3385,7 +3385,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1178674716186676302, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4133531029041919000, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: healthText
@@ -3453,7 +3453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6916458643909846956, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4.7
       objectReference: {fileID: 0}
     - target: {fileID: 6916458643909846961, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: slowAmount
@@ -7017,7 +7017,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 3.0222225e+32, y: 2.8168876e+20, z: 1.0899303e+27, w: 5.2166656e-11}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
