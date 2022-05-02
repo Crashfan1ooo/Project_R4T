@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 237367883}
   m_Layer: 0
   m_Name: Shield Generator
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ogSpeed: 0
-  speed: 0
+  speed: 10
   slowSpeedDown: 5
   positions:
   - {x: 29.46, y: 16, z: 0}
