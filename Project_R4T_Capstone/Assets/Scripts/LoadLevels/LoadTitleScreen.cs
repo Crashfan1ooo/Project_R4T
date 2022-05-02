@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadLevel2 : MonoBehaviour
+public class LoadTitleScreen : MonoBehaviour
 {
-    //Loads the first level
+    //Loads Title Screen
     void OnTriggerEnter(Collider ChangeScene)
     {
         if (ChangeScene.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(0);
         }
     }
 }

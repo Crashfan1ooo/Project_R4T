@@ -1567,6 +1567,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60c823e658714d047baa9075cbd1c781, type: 3}
+--- !u!1 &371754826 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2537912249866308803, guid: 60c823e658714d047baa9075cbd1c781, type: 3}
+  m_PrefabInstance: {fileID: 371754825}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &379655820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2218,6 +2223,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddec5aec6ef8c8644b92c0779168e70c, type: 3}
+--- !u!1 &492863045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 492863048}
+  - component: {fileID: 492863047}
+  - component: {fileID: 492863046}
+  m_Layer: 0
+  m_Name: Loadlevel7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &492863046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492863045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b342dc0dcb0c8e4780ce680d9607a75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &492863047
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492863045}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &492863048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492863045}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 139.5, y: -178.44, z: 0}
+  m_LocalScale: {x: 2.6382, y: 9.65634, z: 2.6382}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &495726920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4598,7 +4660,7 @@ PrefabInstance:
     - target: {fileID: 4133531029041919000, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: staminaBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 371754826}
     - target: {fileID: 4133531029041919000, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: HPTicks.Array.data[0]
       value: 
