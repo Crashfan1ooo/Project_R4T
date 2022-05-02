@@ -12617,7 +12617,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1178674716186676302, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.41
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4133531029041919000, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: healthText
@@ -12695,5 +12695,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainPlayer
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6916458643909846956, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916458644136269370, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6916458643909846948, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+    - {fileID: 904215933, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+    - {fileID: 904215928, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ebb748ca1db175d4595baae03e664b63, type: 3}

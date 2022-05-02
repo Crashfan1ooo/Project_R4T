@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject staminaBar;
     //private StaminaBar staminaBarMeter;
-    public TextMeshProUGUI healthText;
+    //public TextMeshProUGUI healthText;
     public bool isDead = false;
 
     public AudioSource mouseHit;

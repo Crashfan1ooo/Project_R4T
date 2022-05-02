@@ -5961,6 +5961,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178674716186676302, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4133531029041919000, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: mouseHit
       value: 
@@ -6003,7 +6007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133531029041919002, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.24
+      value: -3.89
       objectReference: {fileID: 0}
     - target: {fileID: 4133531029041919002, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6041,9 +6045,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 6916458643909846956, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6916458643909846962, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: m_Volume
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916458644136269370, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6916458644378328159, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: orthographic
@@ -6053,7 +6065,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -8.87
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6916458643909846948, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+    - {fileID: 904215933, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+    - {fileID: 904215928, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
 --- !u!4 &1104681541 stripped
 Transform:
