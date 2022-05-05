@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isDead = false;
 
     public AudioSource mouseHit;
+    public AudioSource healthAccepted;
 
     // Start is called before the first frame update
     void Start()

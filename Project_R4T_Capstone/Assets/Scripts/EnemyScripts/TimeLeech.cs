@@ -27,13 +27,15 @@ public class TimeLeech : MonoBehaviour
 
     private Vector2 movement;
 
+    public AudioSource leechDrainSound;
+
     private Rigidbody rb;
     //public Transform player; // this allows the leech to get the player position
     // Start is called before the first frame update
     void Start()
     {
         isLeechin = false;
-        //targetPlayer = GameObject.Find("MainPlayer");
+        targetPlayer = GameObject.Find("MainPlayer").transform;
         timeDrain = GameObject.Find("Canvas").transform.GetChild(2).GetComponent<SlowGauge>();
         rb = this.GetComponent<Rigidbody>();
         ogLeechSpeed = leechSpeed;
@@ -84,6 +86,8 @@ public class TimeLeech : MonoBehaviour
         //this.transform.Translate(new Vector3(-5, 0, 0) * Time.deltaTime);
         isLeechin = false;
         this.gameObject.GetComponent<CapsuleCollider>().isTrigger = false;
+        leechDrainSound.loop = false;
+        leechDrainSound.Stop();
     }
 
 
@@ -95,7 +99,10 @@ public class TimeLeech : MonoBehaviour
         {
             //sucks the player of the time slow
             timeDrain.UseSlow(0.05f);
+            
+            
         }
+       
     }
 
     
@@ -114,6 +121,8 @@ public class TimeLeech : MonoBehaviour
                 GameObject mainplayer = other.gameObject;
                 this.transform.parent = mainplayer.transform; // is parented to the player
                 isLeechin = true;
+                leechDrainSound.loop = true;
+                leechDrainSound.Play();
 
             }
         }
@@ -147,6 +156,7 @@ public class TimeLeech : MonoBehaviour
             LeechMove();
             this.gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
             //this.gameObject.transform.Translate(this.transform.position.x, this.transform.position.y, 0);
+            
 
         }
 
