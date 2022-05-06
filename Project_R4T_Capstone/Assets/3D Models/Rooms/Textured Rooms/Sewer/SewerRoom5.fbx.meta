@@ -3,7 +3,12 @@ guid: 20afad83e5084334c8614197309db22e
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SewerRoom5Floor_Base_color
+    second: {fileID: 2800000, guid: bb1fcbfd05273b3488cf3c84914dfeda, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,17 @@ guid: 8b3f7da584be0764a939e0aa4bf8e91f
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RoomRaisedBackFloorM_Base_color
+    second: {fileID: 2800000, guid: 5fd3cb06a024e034f94e2e85f36347ea, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RoomRaisedBackWallsM_Base_color
+    second: {fileID: 2800000, guid: ac6fd6c5aec03104e82ec52dc5d338c7, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
