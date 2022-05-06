@@ -22,7 +22,9 @@ public class PlayerMovement : MonoBehaviour
     private bool canDoubleJump = false;
     public bool isSprinting = false;
     public int health = 5;
-    
+
+    private bool isInvincible = false;
+    private IEnumerator coroutine; 
 
     public Image[] HPTicks;
 
@@ -40,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
     {
         originalSpeed = characterSpeed;
         controller = GetComponent<CharacterController>();
+        coroutine = PlayerIsInvinicible(5.0f);
         //staminaBarMeter = staminaBar.GetComponent<StaminaBar>();
 
         //setHealthText();
@@ -170,8 +173,8 @@ public class PlayerMovement : MonoBehaviour
 
        }
 
-            
-   
+
+        Debug.Log(isInvincible);
        
 
         if(isDead == true)
@@ -196,14 +199,26 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.collider.CompareTag("EnemyBullet") || collision.collider.CompareTag("Enemy"))
         {
-            health = health - 1;
-            mouseHit.Play();
+            if (isInvincible == false)
+            {
 
 
-            //setHealthText();
-            
+                health = health - 1;
+                mouseHit.Play();
+                isInvincible = true;
+                StartCoroutine(PlayerIsInvinicible(3.0f));
+                //setHealthText();
+            }
         }
     }
+
+    private IEnumerator PlayerIsInvinicible(float WaitTime)
+    {
+        yield return new WaitForSeconds(WaitTime);
+        isInvincible = false;
+        
+    }
+        
 
     void Death()
     {
