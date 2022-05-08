@@ -5,7 +5,7 @@ using UnityEngine;
 public class fallingPlatform : MonoBehaviour
 {
     bool isFalling = false;
-    float downSpeed = 0;
+    float downSpeed = 1;
 
 
      void OnTriggerEnter(Collider collider)
