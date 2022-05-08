@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: RoomPlatformBackFloorM_Base_color
-    second: {fileID: 2800000, guid: bf0c63acff46dae4f83632efb36549bc, type: 3}
+    second: {fileID: 2800000, guid: de2c42abc6dc5ff4aa1f555eaa45fd0f, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: RoomPlatformBackWallsM_Base_color
-    second: {fileID: 2800000, guid: 63d77a13c91b09a42bd5d1c7680e24df, type: 3}
+    second: {fileID: 2800000, guid: e95aa66019c053d44b2ef84092b6aa58, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
