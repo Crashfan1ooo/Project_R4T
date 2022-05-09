@@ -206,7 +206,7 @@ public class PlayerMovement : MonoBehaviour
                 health = health - 1;
                 mouseHit.Play();
                 isInvincible = true;
-                StartCoroutine(PlayerIsInvinicible(3.0f));
+                StartCoroutine(PlayerIsInvinicible(2.5f));
                 //setHealthText();
             }
         }
