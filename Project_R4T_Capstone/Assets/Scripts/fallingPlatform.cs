@@ -5,7 +5,7 @@ using UnityEngine;
 public class fallingPlatform : MonoBehaviour
 {
     bool isFalling = false;
-    float downSpeed = 1;
+    float downSpeed = 0f;
 
 
      void OnTriggerEnter(Collider collider)
@@ -21,7 +21,7 @@ public class fallingPlatform : MonoBehaviour
     {
         if(isFalling)
         {
-            downSpeed += Time.deltaTime/30;
+            downSpeed += Time.deltaTime/5;
             transform.position = new Vector3(transform.position.x,
                 transform.position.y - downSpeed,
                 transform.position.z);
