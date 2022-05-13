@@ -13,7 +13,7 @@ public class gunShoot : MonoBehaviour
 
 
 
-    public float bulletSpeed = 20f;
+    public float bulletSpeed = 40f;
     public float slowSpeed = 1f;
 
 

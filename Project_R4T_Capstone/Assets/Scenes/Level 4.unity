@@ -4069,6 +4069,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 256904056}
     - target: {fileID: 6916458643909846961, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: bulletSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916458643909846961, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: slowTimeSoundFB
       value: 
       objectReference: {fileID: 1984752001}

@@ -4941,6 +4941,10 @@ PrefabInstance:
       propertyPath: slowAmount
       value: 
       objectReference: {fileID: 1635163526}
+    - target: {fileID: 6916458643909846961, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
+      propertyPath: bulletSpeed
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6916458643909846962, guid: ebb748ca1db175d4595baae03e664b63, type: 3}
       propertyPath: m_Volume
       value: 0.2
