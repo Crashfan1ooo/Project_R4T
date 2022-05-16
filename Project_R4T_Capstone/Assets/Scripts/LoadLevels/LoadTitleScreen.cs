@@ -10,7 +10,12 @@ public class LoadTitleScreen : MonoBehaviour
     {
         if (ChangeScene.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(10);
         }
+    }
+
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }
