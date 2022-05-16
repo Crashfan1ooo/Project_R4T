@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5390564546826990976, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390564546826990976, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0261555
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390564546826990976, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
+      propertyPath: m_Center.y
+      value: 0.48692307
+      objectReference: {fileID: 0}
     - target: {fileID: 5390564546826990978, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
       propertyPath: m_Name
       value: Falling Platform
@@ -716,7 +728,7 @@ Transform:
   m_GameObject: {fileID: 86267936}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 146.3, y: -33.137363, z: 0}
-  m_LocalScale: {x: 112.75888, y: 1, z: 1}
+  m_LocalScale: {x: 112.75888, y: 1, z: 15.986}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 40
@@ -4683,6 +4695,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5390564546826990976, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390564546826990976, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
+      propertyPath: m_Size.y
+      value: 0.95218647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390564546826990976, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
+      propertyPath: m_Center.y
+      value: 0.52390754
+      objectReference: {fileID: 0}
     - target: {fileID: 5390564546826990978, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
       propertyPath: m_Name
       value: Falling Platform (2)
@@ -6205,7 +6229,7 @@ Transform:
   m_GameObject: {fileID: 1359627893}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -62.008484, y: -33.137363, z: 0}
-  m_LocalScale: {x: 174.06972, y: 1, z: 1}
+  m_LocalScale: {x: 174.06972, y: 1, z: 15.986}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 39
@@ -7814,6 +7838,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5390564546826990976, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390564546826990976, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0049963
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390564546826990976, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
+      propertyPath: m_Center.y
+      value: 0.49750206
+      objectReference: {fileID: 0}
     - target: {fileID: 5390564546826990978, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
       propertyPath: m_Name
       value: Falling Platform (3)
@@ -10530,6 +10566,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5390564546826990976, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390564546826990976, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9260946
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390564546826990976, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
+      propertyPath: m_Center.y
+      value: 0.5369536
+      objectReference: {fileID: 0}
     - target: {fileID: 5390564546826990978, guid: 75c3664db9cf83348aac3a654b70d2ec, type: 3}
       propertyPath: m_Name
       value: Falling Platform (1)
