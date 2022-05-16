@@ -633,7 +633,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: We hoped you enjoyed it! This is only the beginning of the journey to stop
+  m_text: We hope you enjoyed it! This is only the beginning of the journey to stop
     the Dark Rat!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
